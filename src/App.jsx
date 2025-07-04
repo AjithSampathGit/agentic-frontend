@@ -10,10 +10,10 @@ function App() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          session_id: sessionId,
-          timestamp: new Date().toISOString(),
-          step: "start",
-        }),
+          customer_id: "Test 123",
+          step: "upload_docs",
+          inactivity_minutes: 2
+         }),
       });
       const data = await res.json();
       setResponse(data);
